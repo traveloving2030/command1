@@ -1,6 +1,9 @@
 curl -sL https://deb.nodesource.com/setup_8.x | -E bash -
 sudo apt-get install -y nodejs
 
+printf "\n"
+printf "node install complete\n"
+
 docker pull ptunstad/fabric-baseos:arm64-0.4.15 &&
 docker pull ptunstad/fabric-basejvm:arm64-0.4.15 &&
 docker pull ptunstad/fabric-baseimage:arm64-0.4.15 &&
@@ -12,6 +15,9 @@ docker pull ptunstad/fabric-kafka:arm64-1.4.1 &&
 docker pull ptunstad/fabric-couchdb:arm64-1.4.1 &&
 docker pull ptunstad/fabric-tools:arm64-1.4.1
 
+printf "\n"
+printf "docker pull complete\n"
+
 sudo mkdir /data && sudo chmod -R ugo+rw /data
 git clone -b "rpi" https://github.com/Tunstad/Hyperprov.git
 
@@ -21,3 +27,6 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
+
+printf "\n"
+printf "docker swarm complete\n"
