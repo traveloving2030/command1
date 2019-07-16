@@ -1,4 +1,3 @@
-apt-get update && apt-get install curl wget sudo
 wget https://dl.google.com/go/go1.11.1.linux-arm64.tar.gz
 tar -C /usr/local -xzf go1.11.1.linux-arm64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile 
@@ -11,7 +10,7 @@ apt-get install docker-compose
 
 sudo pip install --trusted-host pypi.org docker-compose
 
-apt-get install git python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
+apt-get install python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install behave nose docker-compose
