@@ -1,4 +1,4 @@
-apt-get update && apt-get install curl wget sudo
+apt-get install curl wget sudo
 
 wget https://dl.google.com/go/go1.11.1.linux-arm64.tar.gz
 tar -C /usr/local -xzf go1.11.1.linux-arm64.tar.gz
