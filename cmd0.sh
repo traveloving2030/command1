@@ -15,12 +15,12 @@ printf "GOPATH complete"
 
 curl -sSL https://get.docker.com | sh
 curl -s https://packagecloud.io/install/repositories/Hypriot/Schatzkiste/script.deb.sh | bash
-apt-get install docker-compose
+apt-get install -y docker-compose
 
 printf "\n"
 docker ps
 
-apt-get install git python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
+apt-get install -y python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
 printf "\n"
 printf "1. OK"
 pip install --upgrade pip
