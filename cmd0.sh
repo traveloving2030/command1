@@ -17,7 +17,7 @@ curl -sSL https://get.docker.com | sh
 curl -s https://packagecloud.io/install/repositories/Hypriot/Schatzkiste/script.deb.sh | bash
 apt-get install -y docker-compose
 
-apt-get install git python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
+apt-get install -y git python-pip python-dev docker-compose build-essential libtool libltdl-dev libssl-dev libevent-dev libffi-dev
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install behave nose docker-compose
