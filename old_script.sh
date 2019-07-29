@@ -20,12 +20,9 @@ ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrga
 #Prevents "Minimum memory limit allowed is 4MB" error on low RAM devices (like RasPi)
 CORE_VM_DOCKER_HOSTCONFIG_MEMORY=536870912
 # Sets the default images to use my build for the ARM architecture
-CORE_VM_DOCKER_HOSTCONFIG_MEMORY=536870912
-# Sets the default images to use my build for the ARM architecture
 CORE_CHAINCODE_BUILDER=ptunstad/fabric-ccenv:arm64-1.4.1 
 CORE_CHAINCODE_GOLANG=ptunstad/fabric-baseos:arm64-0.4.15 
 CORE_CHAINCODE_CAR=ptunstad/fabric-baseos:arm64-0.4.15 
-CORE_CHAINCODE_JAVA=apelser/fabric-javaenv:arm64-1.4.1
 
 echo "Channel name : "$CHANNEL_NAME
 
@@ -129,7 +126,7 @@ joinChannel () {
 installChaincode () {
 	PEER=$1
 	setGlobals $PEER
-	peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02 >&log.txt
+	peer chaincode install -n mycc -v 1.0 -p github.com/hyperledger/fabric/core/chaincode//chaincode_example02 >&log.txt
 	res=$?
 	cat log.txt
         verifyResult $res "Chaincode installation on remote peer PEER$PEER has Failed"
